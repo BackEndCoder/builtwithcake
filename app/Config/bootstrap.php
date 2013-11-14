@@ -81,6 +81,10 @@ Cache::config('default', ['engine' => 'File']);
  */
 CakePlugin::load('Crud');
 CakePlugin::load('Migrations');
+CakePlugin::load('Users');
+CakePlugin::load('Search');
+CakePlugin::load('Utils');
+
 
 if (php_sapi_name() !== 'cli' && Configure::read('debug') && in_array('DebugKit', App::objects('plugin'))) {
 	CakePlugin::load('DebugKit');
@@ -91,7 +95,7 @@ if (php_sapi_name() !== 'cli' && Configure::read('debug') && in_array('DebugKit'
 			'DebugKit.Toolbar',
 			[
 				'panels' => [
-					'Crud.Crud'
+//					'Crud.Crud'
 				]
 			]
 		);
