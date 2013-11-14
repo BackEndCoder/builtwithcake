@@ -3,23 +3,82 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "95844a0303fd430158116f82e04a79fb",
+    "hash": "4e980d984acbdce05dbee490b9b96ad5",
     "packages": [
         {
-            "name": "cakephp/cakephp",
-            "version": "2.4.0",
+            "name": "cakedc/migrations",
+            "version": "2.2.3",
             "source": {
                 "type": "git",
-                "url": "git://github.com/cakephp/cakephp.git",
-                "reference": "2.4.0"
+                "url": "https://github.com/CakeDC/migrations.git",
+                "reference": "94036a606089c7e14b349eba043b0f58a0947e29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/cakephp/cakephp/archive/2.4.0.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://api.github.com/repos/CakeDC/migrations/zipball/94036a606089c7e14b349eba043b0f58a0947e29",
+                "reference": "94036a606089c7e14b349eba043b0f58a0947e29",
+                "shasum": ""
             },
-            "type": "library"
+            "require": {
+                "composer/installers": "*"
+            },
+            "type": "cakephp-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cake Development Corporation",
+                    "email": "team@cakedc.com",
+                    "homepage": "http://cakedc.com"
+                }
+            ],
+            "description": "Migrations Plugin for CakePHP",
+            "homepage": "http://cakedc.com",
+            "keywords": [
+                "cakephp",
+                "migrations"
+            ],
+            "time": "2013-10-21 10:45:27"
+        },
+        {
+            "name": "cakedc/users",
+            "version": "2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/CakeDC/users.git",
+                "reference": "2890e8b829d3d9b6765e8138cc6c066b4f73df0b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/CakeDC/users/zipball/2890e8b829d3d9b6765e8138cc6c066b4f73df0b",
+                "reference": "2890e8b829d3d9b6765e8138cc6c066b4f73df0b",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*"
+            },
+            "type": "cakephp-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cake Development Corporation",
+                    "email": "team@cakedc.com",
+                    "homepage": "http://cakedc.com"
+                }
+            ],
+            "description": "Users Plugin for CakePHP",
+            "homepage": "http://cakedc.com",
+            "keywords": [
+                "Users",
+                "auth",
+                "cakephp"
+            ],
+            "time": "2013-09-26 10:23:52"
         },
         {
             "name": "composer/installers",
@@ -94,6 +153,73 @@
                 "zend"
             ],
             "time": "2013-10-24 16:13:49"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "cakephp/cakephp",
+            "version": "2.4.2",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/cakephp/cakephp.git",
+                "reference": "2.4.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/cakephp/cakephp/archive/2.4.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "library"
+        },
+        {
+            "name": "cakephp/debug_kit",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cakephp/debug_kit.git",
+                "reference": "a6d601c1f9f5e380aeef1587f702d41577e15327"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/a6d601c1f9f5e380aeef1587f702d41577e15327",
+                "reference": "a6d601c1f9f5e380aeef1587f702d41577e15327",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*",
+                "php": ">=5.3.0"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2.x-dev"
+                },
+                "installer-name": "DebugKit"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Story",
+                    "homepage": "http://mark-story.com",
+                    "role": "Author"
+                },
+                {
+                    "name": "CakePHP Community",
+                    "homepage": "https://github.com/cakephp/debug_kit/graphs/contributors"
+                }
+            ],
+            "description": "CakePHP Debug Kit",
+            "homepage": "https://github.com/cakephp/debug_kit",
+            "keywords": [
+                "cakephp",
+                "debug",
+                "kit"
+            ],
+            "time": "2013-11-14 15:32:47"
         },
         {
             "name": "friendsofcake/crud",
@@ -162,7 +288,6 @@
             "time": "2013-11-12 12:06:54"
         }
     ],
-    "packages-dev": null,
     "aliases": [
 
     ],
@@ -170,9 +295,9 @@
     "stability-flags": [
 
     ],
-    "platform": {
-        "php": ">=5.4"
-    },
+    "platform": [
+
+    ],
     "platform-dev": [
 
     ]
