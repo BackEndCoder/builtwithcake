@@ -49,9 +49,14 @@ class AppController extends Controller {
 				'Crud.Api',
 				'Crud.ApiPagination',
 				'Crud.ApiQueryLog'
+			],
+			'actions' => [
+				'index' => 'Crud.Index',
+				'add' => 'Crud.Add',
+				'edit' => 'Crud.Edit',
+				'view' => 'Crud.View'
 			]
 		],
-		'Paginator' => ['settings' => ['paramType' => 'querystring', 'limit' => 30]]
+		'Paginator' => ['settings' => ['paramType' => 'querystring', 'limit' => 30]],
 	];
-
 }

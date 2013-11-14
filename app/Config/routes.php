@@ -26,6 +26,9 @@
  * its action called 'display', and we pass a param to select the view file
  * to use (in this case, /app/View/Pages/home.ctp)...
  */
+
+	Router::connect('/login', array('controller' => 'bwc_users', 'action' => 'login', 'admin' => false));
+
 	Router::connect('/', ['controller' => 'pages', 'action' => 'display', 'home']);
 /**
  * ...and connect the rest of 'Pages' controller's urls.
