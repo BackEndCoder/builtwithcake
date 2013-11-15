@@ -1,0 +1,18 @@
+@import url(http://fonts.googleapis.com/css?family=Allan:400,700);
+
+.title {
+	h1 {
+		font: 40px Allan, sans-serif;
+	}
+	p {
+		position: relative;
+		top: -10px;
+		font-size: 12px;
+	}
+}
+
+.error {
+	input, div.error-message {
+		color: #cc0000;
+	}
+}

@@ -1,0 +1,36 @@
+$labelWidth: 120px;
+
+div.input {
+	margin: 15px 0;
+    &.required label:after{
+        content: "*";
+    }
+	label {
+		width: $labelWidth;
+		margin-right: 20px;
+		text-align: right;
+	}
+	input, textarea {
+		width: 75%;
+	}
+	input[type=checkbox] {
+		width: 30px;
+		margin-left: $labelWidth;
+	}
+	input[type=file] {
+		margin-left: $labelWidth;
+	}
+	textarea {
+		height: 100px;
+	}
+}
+div.input.file {
+	img {
+		float: right;
+	}
+}
+div.submit {
+	input {
+		margin-right: 10px;
+	}
+}
