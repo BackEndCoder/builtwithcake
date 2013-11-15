@@ -40,6 +40,7 @@
     "cakedc/migrations": "2.2.3",
     "cakedc/users": "2.0",
     "cakedc/search": "2.2.1",
-    "cakedc/utils": "1.4.2"
+    "cakedc/utils": "1.4.2",
+    "josegonzalez/cakephp-upload": "dev-master"
   }
 }
