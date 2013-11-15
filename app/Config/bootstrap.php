@@ -84,7 +84,7 @@ CakePlugin::load('Migrations');
 CakePlugin::load('Users');
 CakePlugin::load('Search');
 CakePlugin::load('Utils');
-
+CakePlugin::load('Upload');
 
 if (php_sapi_name() !== 'cli' && Configure::read('debug') && in_array('DebugKit', App::objects('plugin'))) {
 	CakePlugin::load('DebugKit');
