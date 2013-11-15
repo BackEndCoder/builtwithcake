@@ -51,12 +51,44 @@ class AppController extends Controller {
 				'Crud.ApiQueryLog'
 			],
 			'actions' => [
+				'home' => 'Crud.Index',
 				'index' => 'Crud.Index',
 				'add' => 'Crud.Add',
 				'edit' => 'Crud.Edit',
-				'view' => 'Crud.View'
+				'view' => 'Crud.View',
+				'admin_index' => 'Crud.Index',
+				'admin_view' => 'Crud.View',
+				'admin_edit' => 'Crud.Edit'
 			]
 		],
 		'Paginator' => ['settings' => ['paramType' => 'querystring', 'limit' => 30]],
+		'Users.RememberMe',
+		'Auth'
 	];
+
+/**
+ * beforeFilter method
+ */
+	public function beforeFilter() {
+		if (isset($this->request->params['prefix']) && $this->request->params['prefix'] === 'admin') {
+			$this->layout = 'admin';
+		}
+
+		$this->RememberMe->restoreLoginFromCookie();
+		$this->Auth->authorize = array('Controller');
+		$this->Auth->allow(array('home', 'index', 'add', 'edit', 'view'));
+	}
+
+/**
+ * Deal with authorizing users when they access controller actions
+ *
+ * @param array $user
+ */
+	public function isAuthorized($user = null) {
+		if ($this->request->prefix === 'admin' && $this->Auth->user('is_admin') === true) {
+			return true;
+		}
+
+		return false;
+	}
 }
