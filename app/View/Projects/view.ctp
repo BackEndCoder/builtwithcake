@@ -1,56 +1,15 @@
 <div class="projects view">
-<h2><?php echo __('Project'); ?></h2>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($project['Project']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Title'); ?></dt>
-		<dd>
-			<?php echo h($project['Project']['title']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Url'); ?></dt>
-		<dd>
-			<?php echo h($project['Project']['url']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Summary'); ?></dt>
-		<dd>
-			<?php echo h($project['Project']['summary']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Description'); ?></dt>
-		<dd>
-			<?php echo h($project['Project']['description']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('User'); ?></dt>
-		<dd>
-			<?php echo $this->Html->link($project['User']['id'], array('controller' => 'users', 'action' => 'view', $project['User']['id'])); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Created'); ?></dt>
-		<dd>
-			<?php echo h($project['Project']['created']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Modified'); ?></dt>
-		<dd>
-			<?php echo h($project['Project']['modified']); ?>
-			&nbsp;
-		</dd>
-	</dl>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Project'), array('action' => 'edit', $project['Project']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Project'), array('action' => 'delete', $project['Project']['id']), null, __('Are you sure you want to delete # %s?', $project['Project']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Projects'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Project'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
-	</ul>
+	<?php echo $this->Html->image('../files/project/screenshot/' . $project['Project']['screenshot_dir'] . '/medium_' . $project['Project']['screenshot']);?>
+	<div class="intro">
+		<h1><?php echo h($project['Project']['title']);?></h1>
+		<p class="meta"><?php echo $this->Time->niceShort($project['Project']['created']);?> by <?php echo AuthComponent::user('username');?></p>
+
+		<h2>Summary</h2>
+		<?php echo h($project['Project']['summary']);?>
+	</div>
+
+	<div class="desc">
+		<h2>Description</h2>
+		<?php echo h($project['Project']['description']);?>
+	</div>
 </div>

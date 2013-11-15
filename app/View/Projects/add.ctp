@@ -1,23 +1,20 @@
 <div class="projects form">
-<?php echo $this->Form->create('Project'); ?>
+<?php echo $this->Form->create('Project', array('type' => 'file')); ?>
 	<fieldset>
 		<legend><?php echo __('Add Project'); ?></legend>
-	<?php
+		<p>Required fields are marked with an asterisk *</p>
+		<?php
 		echo $this->Form->input('title');
 		echo $this->Form->input('url');
 		echo $this->Form->input('summary');
 		echo $this->Form->input('description');
-		echo $this->Form->input('user_id');
+		echo $this->Form->input('screenshot', array('type' => 'file'));
+		echo $this->Form->input('screenshot_dir', array('type' => 'hidden'));
 	?>
+		<p>Submitting your project will add it to the moderation queue. It will not appear on the site until it is approved by an administrator.</p>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-
-		<li><?php echo $this->Html->link(__('List Projects'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
-	</ul>
+<?php
+echo $this->Form->submit('Submit my project', array('class' => 'btn btn-success'));
+echo $this->Form->end();
+?>
 </div>
