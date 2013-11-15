@@ -2,12 +2,12 @@
 <html>
 <head>
 	<?php echo $this->Html->charset(); ?>
-	<title>Built With Cake: <?php echo $title_for_layout;?></title>
+	<title>Built With Cake Administration: <?php echo $title_for_layout;?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css(array('../bootstrap/css/bootstrap.min', '../bootstrap/css/bootstrap-theme.min', 'main'));
+		echo $this->Html->css(array('../bootstrap/css/bootstrap.min', 'main', 'admin'));
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -24,29 +24,21 @@
 	<div class="container">
 		<header class="row">
 			<div class="title col-md-12">
-				<h1>Built With Cake</h1>
-				<p>Brought to you by <?php echo $this->Html->link('Friends of Cake', 'http://friendsofcake.com/');?></p>
-				<?php echo $this->element('navigation');?>
+				<h1>Built With Cake Administration</h1>
 			</div>
 		</header>
 		<div id="content" class="row">
-			<div class="col-md-12">
+			<div class="col-md-3">
+				<?php echo $this->element('admin/navigation');?>
+			</div>
+			<div class="col-md-9">
 				<?php echo $this->Session->flash(); ?>
 				<?php echo $this->fetch('content'); ?>
 			</div>
 		</div>
 		<footer class="row">
-			<div class="col-md-12 links">
-				<ul>
-					<li><a href="http://cakephp.org/">CakePHP</a></li>
-					<li>|</li>
-					<li><a href="http://friendsofcake.com/">Friends of Cake</a></li>
-					<li>|</li>
-					<li><a href="http://github.com/friendsofcake/">Fork us on Github!</a></li>
-				</ul>
-			</div>
-			<div class="col-md-12 credit">
-				<p>&copy; <?php echo date('Y');?> <?php echo $this->Html->link('FriendsOfCake.com', 'http://friendsofcake.com/');?> | Built by <?php echo $this->Html->link('@yelldavid', 'http://github.com/davidyell');?></p>
+			<div class="col-md-12">
+				<p>&copy; <?php echo date('Y');?> <?php echo $this->Html->link('FriendsOfCake.com', 'http://friendsofcake.com/');?></p>
 			</div>
 		</footer>
 	</div>

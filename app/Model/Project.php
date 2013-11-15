@@ -14,21 +14,56 @@ class Project extends AppModel {
  */
 	public $displayField = 'title';
 
-
-	//The Associations below have been created with all possible keys, those that are not needed can be removed
-
 /**
  * belongsTo associations
  *
  * @var array
  */
 	public $belongsTo = array(
-		'User' => array(
-			'className' => 'User',
-			'foreignKey' => 'user_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
+		'BwcUser' => array(
+			'foreignKey' => 'user_id'
+		)
+	);
+
+/**
+ * Configure behaviours
+ * @var array
+ */
+	public $actsAs = array(
+		'Upload.Upload' => array(
+			'screenshot' => array(
+				'fields' => array(
+					'dir' => 'screenshot_dir'
+				),
+				'thumbnailSizes' => array(
+					'carousel' => '1140w',
+					'display' => '800w',
+					'medium' => '360w',
+					'account' => '120w',
+					'small' => '100w'
+				)
+			)
+		)
+	);
+
+/**
+ * Model validation
+ *
+ * @var array
+ */
+	public $validate = array(
+		'title' => array(
+			'one' => array(
+				'rule' => 'notEmpty',
+				'message' => 'Please enter a title',
+			)
+		),
+		'url' => array(
+			'one' => array(
+				'rule' => array('url', true),
+				'message' => 'Please enter a valid url',
+				'allowEmpty' => true
+			)
 		)
 	);
 }
