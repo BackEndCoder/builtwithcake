@@ -9,7 +9,7 @@
 			if ($project['Project']['screenshot']) {
 				if (!empty($project['Project']['screenshot'])) {
 					echo $this->Html->link(
-						$this->Html->image('../files/project/screenshot/' . $project['Project']['screenshot_dir'] . '/small_' . $project['Project']['screenshot']),
+						$this->Html->image('../files/project/screenshot/' . $project['Project']['screenshot_dir'] . '/medium_' . $project['Project']['screenshot']),
 						'#',
 						array('data-toggle' => 'modal', 'data-target' => '#screenshot' . $project['Project']['id'], 'title' => 'Click to view larger size')
 					);
@@ -23,6 +23,7 @@
 								</div>
 								<div class="modal-body">
 									<?php echo $this->Html->image('../files/project/screenshot/' . $project['Project']['screenshot_dir'] . '/display_' . $project['Project']['screenshot']); ?>
+									<div class="clearfix"><!-- blank --></div>
 								</div>
 							</div>
 						</div>
@@ -30,26 +31,28 @@
 				}
 			}
 			?>
-			<header>
-				<h3><?php echo $this->Html->link($project['Project']['title'], array('controller' => 'projects', 'action' => 'view', $project['Project']['id']));?></h3>
-				<p><?php
-					if (!empty($project['Project']['url'])) {
-						echo $this->Html->link($project['Project']['url'], $project['Project']['url']);
-					}
-				?></p>
-			</header>
-			<div class="summary"><?php echo h($project['Project']['summary']);?></div>
+			<section>
+				<header>
+					<h3><?php echo $this->Html->link($project['Project']['title'], array('controller' => 'projects', 'action' => 'view', $project['Project']['id']));?></h3>
+					<p><?php
+						if (!empty($project['Project']['url'])) {
+							echo $this->Html->link($project['Project']['url'], $project['Project']['url']);
+						}
+					?></p>
+				</header>
+				<div class="summary">
+					<h4>Summary</h4>
+					<?php echo h($project['Project']['summary']);?>
+				</div>
+				<div class="description">
+					<h4>Description</h4>
+					<?php echo h($project['Project']['description']);?>
+				</div>
+			</section>
+			<div class="clearfix"><!-- blank --></div>
 		</article>
 
 	<?php endforeach; ?>
-
-	<p>
-	<?php
-	echo $this->Paginator->counter(array(
-	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
-	));
-	?>
-	</p>
 
 	<div class="paging">
 	<?php

@@ -42,7 +42,7 @@
 					<li>|</li>
 					<li><a href="http://friendsofcake.com/">Friends of Cake</a></li>
 					<li>|</li>
-					<li><a href="http://github.com/friendsofcake/">Fork us on Github!</a></li>
+					<li><a href="http://github.com/friendsofcake/builtwithcake/">Fork us on Github!</a></li>
 				</ul>
 			</div>
 			<div class="col-md-12 credit">

@@ -16,9 +16,6 @@ body > .container > header, #content, body > .container > footer {
 	article {
 		margin: 15px 0;
 		padding: 10px;
-		border-radius: 3px;
-		border: 1px solid darken(#efefef, 10%);
-		background-color: #efefef;
 		img {
 			float: left;
 			margin: 0 15px 15px 0;
@@ -36,6 +33,14 @@ body > .container > header, #content, body > .container > footer {
 			}
 		}
 	}
+}
+.users.view article {
+	border-radius: 3px;
+	border: 1px solid darken(#efefef, 10%);
+	background-color: #efefef;
+}
+.projects.index article section {
+	margin-left: 400px;
 }
 
 .projects.view {

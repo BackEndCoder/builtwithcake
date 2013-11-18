@@ -31,6 +31,19 @@ class ProjectsController extends AppController {
 	}
 
 /**
+ * Index action to catch event to overload pagination limit
+ *
+ * @return CakeResponse
+ */
+	public function index() {
+		$this->Crud->on('beforePaginate', function ($e) {
+			$e->subject->paginator->settings = array_merge($e->subject->paginator->settings, array('limit' => 5));
+		});
+		
+		return $this->Crud->execute();
+	}
+
+/**
  * Allow a regular use to submit a new project
  *
  * @return CakeResponse

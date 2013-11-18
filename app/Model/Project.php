@@ -15,6 +15,13 @@ class Project extends AppModel {
 	public $displayField = 'title';
 
 /**
+ * Default model ordering
+ *
+ * @var string
+ */
+	public $order = 'Project.modified DESC';
+
+/**
  * belongsTo associations
  *
  * @var array
