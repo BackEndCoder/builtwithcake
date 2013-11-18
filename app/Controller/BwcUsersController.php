@@ -23,6 +23,7 @@ class BwcUsersController extends UsersController {
 		} else {
 			$this->Auth->loginRedirect = array('controller' => 'projects', 'action' => 'index', 'admin' => true, 'plugin' => false);
 		}
+		$this->Auth->logoutRedirect = '/';
 	}
 
 /**

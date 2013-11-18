@@ -78,7 +78,6 @@ class AppController extends Controller {
 		$this->Auth->authorize = array('Controller');
 		$this->Auth->allow(array('home', 'index', 'edit', 'view'));
 		$this->Auth->loginAction = array('controller' => 'bwc_users', 'action' => 'login', 'plugin' => false, 'admin' => false);
-		$this->Auth->logoutRedirect = '/';
 		$this->Auth->authError = __('Please login.');
 	}
 
@@ -89,6 +88,10 @@ class AppController extends Controller {
  */
 	public function isAuthorized($user = null) {
 		if ($this->request->prefix === 'admin' && $this->Auth->user('is_admin') === true) {
+			return true;
+		}
+		
+		if (empty($this->request->prefix) && $user) {
 			return true;
 		}
 
