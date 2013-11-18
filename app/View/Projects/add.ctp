@@ -5,9 +5,9 @@
 		<p>Required fields are marked with an asterisk *</p>
 		<?php
 		echo $this->Form->input('title');
-		echo $this->Form->input('url');
-		echo $this->Form->input('summary');
-		echo $this->Form->input('description');
+		echo $this->Form->input('url', array('after' => '<p>Where is your project available online?</p>'));
+		echo $this->Form->input('summary', array('after' => '<p>A few lines summarising what your project achieves.</p>'));
+		echo $this->Form->input('description', array('after' => '<p>Describe the plugins, technologies and techniques used to build your project.</p>'));
 		echo $this->Form->input('screenshot', array('type' => 'file'));
 		echo $this->Form->input('screenshot_dir', array('type' => 'hidden'));
 	?>
