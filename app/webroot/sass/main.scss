@@ -105,6 +105,15 @@ div.modal-dialog {
 	width: 860px;
 }
 
+.actions {
+	ul {
+		-webkit-padding-start: 0;
+		li {
+			list-style: none;
+		}
+	}
+}
+
 /* Footer bits */
 footer {
 	.links {

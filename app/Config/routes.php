@@ -31,6 +31,7 @@
 	Router::connect('/logout', array('controller' => 'bwc_users', 'action' => 'logout', 'admin' => false));
 	Router::connect('/register', array('controller' => 'bwc_users', 'action' => 'add', 'admin' => false));
 	Router::connect('/user/edit', array('controller' => 'bwc_users', 'action' => 'edit'));
+	Router::connect('/user/reset', array('controller' => 'bwc_users', 'action' => 'reset_password', 'admin' => false));
 	Router::connect('/user/:slug', array('controller' => 'bwc_users', 'action' => 'view'), array('slug' => '[a-z0-9-_]+', 'pass' => array('slug')));
 
 	Router::connect('/', ['controller' => 'projects', 'action' => 'home']);
