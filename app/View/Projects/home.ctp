@@ -51,6 +51,6 @@
 			?>
 		</ul>
 		<div class="clearfix"><!-- blank --></div>
-		<p><?php echo $this->Html->link('More projects', array('controller' => 'projects', 'action' => 'index'), array('class' => 'btn btn-default'));?></p>
+		<p><?php echo $this->Html->link('More projects &raquo;', array('controller' => 'projects', 'action' => 'index'));?></p>
 	</div>
 </div>

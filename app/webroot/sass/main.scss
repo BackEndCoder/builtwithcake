@@ -6,6 +6,9 @@
 body {
 	background: url('../img/brushed.png') repeat;
 }
+body > .container {
+	box-shadow: 0 0 5px 0 rgba(0,0,0,0.3);
+}
 body > .container > header, #content, body > .container > footer {
 	background-color: #fff;
 	padding-bottom: 10px;
@@ -65,7 +68,7 @@ body > .container > header, #content, body > .container > footer {
 			right: 0;
 			left: 60%;
 			padding: 20px;
-			background: rgba(0,0,0,0.3);
+			background: rgba(0,0,0,0.4);
 		}
 	}
 	.carousel-indicators {
@@ -116,6 +119,7 @@ div.modal-dialog {
 
 /* Footer bits */
 footer {
+	padding-top: 20px;
 	.links {
 		height: 30px;
 		ul {
