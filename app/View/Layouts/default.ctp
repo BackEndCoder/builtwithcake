@@ -26,8 +26,8 @@
 			<div class="title col-md-12">
 				<h1>Built With Cake</h1>
 				<p>Brought to you by <?php echo $this->Html->link('Friends of Cake', 'http://friendsofcake.com/');?></p>
-				<?php echo $this->element('navigation');?>
 			</div>
+			<?php echo $this->element('navigation');?>
 		</header>
 		<div id="content" class="row">
 			<div class="col-md-12">

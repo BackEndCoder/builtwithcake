@@ -16,6 +16,7 @@
   border-style: solid;
   border-color: #ccc;
   border-width: 1px 1px 1px 0;
+  background-color: lighten($contentBg, 10%);
 }
 .paging span a {
   display: block;

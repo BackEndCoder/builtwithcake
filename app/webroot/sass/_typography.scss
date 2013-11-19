@@ -1,13 +1,29 @@
 @import url(http://fonts.googleapis.com/css?family=Allan:400,700);
 
+p {
+	color: $bodyText;
+}
+h1, h2 {
+	color: $heading;
+	font-family: Allan, sans-serif;
+}
+a {
+	color: $link;
+	&:hover {
+		color: $linkHover;
+	}
+}
+
 .title {
 	h1 {
-		font: 40px Allan, sans-serif;
+		font: 60px Allan, sans-serif;
+		text-align: center;
 	}
 	p {
 		position: relative;
 		top: -10px;
 		font-size: 12px;
+		text-align: center;
 	}
 }
 
