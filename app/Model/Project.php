@@ -33,6 +33,15 @@ class Project extends AppModel {
 	);
 
 /**
+ * hasAndBelongsToMany associations
+ *
+ * @var array
+ */
+	public $hasAndBelongsToMany = array(
+		'Plugin'
+	);
+
+/**
  * Configure behaviours
  * @var array
  */
