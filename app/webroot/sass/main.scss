@@ -14,29 +14,29 @@ body > .container > header, #content, body > .container > footer {
 	background: $contentBg;
 }
 body > .container > header, body > .container > footer {
-	background: $contentBg url('../img/sprinkles.png') repeat;
+	background: darken($contentBg, 20%);
 }
 
 /* Navigation */
 nav {
-	background-color: darken($contentBg, 15%);
+	background-color: darken($contentBg, 30%);
 	ul.nav.nav-pills {
 		li {
 			margin-left: 0;
-			border-right: 1px solid darken($contentBg, 20%);
+			border-right: 1px solid darken($contentBg, 50%);
 			&.active {
-				background-color: darken($contentBg, 20%);
-				a{
-					color: darken($link, 20%);
+				background-color: darken($contentBg, 35%);
+				a {
+					color: #fff;
 				}
 			}
 			a {
 				border-radius: 0;
 				background-color: transparent;
+				color: $bodyText;
 			}
 			a:hover {
-				background-color: #fff;
-				color: $bodyText;
+				background-color: darken($contentBg, 40%);
 			}
 		}
 	}
@@ -136,7 +136,7 @@ div.modal-dialog {
 
 /* Footer bits */
 footer {
-	border-top: 1px solid darken($contentBg, 20%);
+	border-top: 1px solid darken($contentBg, 40%);
 	padding-top: 20px;
 	.links {
 		height: 30px;
