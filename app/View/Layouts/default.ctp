@@ -46,7 +46,7 @@
 				</ul>
 			</div>
 			<div class="col-md-12 credit">
-				<p>&copy; <?php echo date('Y');?> <?php echo $this->Html->link('FriendsOfCake.com', 'http://friendsofcake.com/');?> | Built by <?php echo $this->Html->link('@yelldavid', 'http://github.com/davidyell');?></p>
+				<p>&copy; <?php echo date('Y');?> <?php echo $this->Html->link('FriendsOfCake.com', 'http://friendsofcake.com/');?></p>
 			</div>
 		</footer>
 	</div>
