@@ -26,8 +26,8 @@
 			<div class="title col-md-12">
 				<h1>Built With Cake</h1>
 				<p>Brought to you by <?php echo $this->Html->link('Friends of Cake', 'http://friendsofcake.com/');?></p>
-				<?php echo $this->element('navigation');?>
 			</div>
+			<?php echo $this->element('navigation');?>
 		</header>
 		<div id="content" class="row">
 			<div class="col-md-12">
@@ -46,7 +46,7 @@
 				</ul>
 			</div>
 			<div class="col-md-12 credit">
-				<p>&copy; <?php echo date('Y');?> <?php echo $this->Html->link('FriendsOfCake.com', 'http://friendsofcake.com/');?> | Built by <?php echo $this->Html->link('@yelldavid', 'http://github.com/davidyell');?></p>
+				<p>&copy; <?php echo date('Y');?> <?php echo $this->Html->link('FriendsOfCake.com', 'http://friendsofcake.com/');?></p>
 			</div>
 		</footer>
 	</div>

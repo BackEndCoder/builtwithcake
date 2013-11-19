@@ -1,17 +1,45 @@
+@import "palette";
 @import "typography";
 @import "forms";
 @import "pagination";
 
 /* Site layout */
 body {
-	background: url('../img/brushed.png') repeat;
+	background: $bodyBg url('../img/brushed.png') repeat;
 }
 body > .container {
 	box-shadow: 0 0 5px 0 rgba(0,0,0,0.3);
 }
 body > .container > header, #content, body > .container > footer {
-	background-color: #fff;
-	padding-bottom: 10px;
+	background: $contentBg;
+}
+body > .container > header, body > .container > footer {
+	background: darken($contentBg, 20%);
+}
+
+/* Navigation */
+nav {
+	background-color: darken($contentBg, 30%);
+	ul.nav.nav-pills {
+		li {
+			margin-left: 0;
+			border-right: 1px solid darken($contentBg, 50%);
+			&.active {
+				background-color: darken($contentBg, 35%);
+				a {
+					color: #fff;
+				}
+			}
+			a {
+				border-radius: 0;
+				background-color: transparent;
+				color: $bodyText;
+			}
+			a:hover {
+				background-color: darken($contentBg, 40%);
+			}
+		}
+	}
 }
 
 /* My account */
@@ -45,7 +73,9 @@ body > .container > header, #content, body > .container > footer {
 .projects.index article section {
 	margin-left: 400px;
 }
-
+.projects.view, .projects.form {
+	margin: 15px 0;
+}
 .projects.view {
 	img {
 		float: left;
@@ -61,6 +91,7 @@ body > .container > header, #content, body > .container > footer {
 /* Carousel customisation */
 #featured-projects {
 	height: 300px;
+	margin: 20px 0;
 	div.carousel-inner {
 		height: 300px;
 		.carousel-caption {
@@ -80,21 +111,8 @@ body > .container > header, #content, body > .container > footer {
 }
 
 /* Content stuff */
-ul.latest-projects {
-	list-style: none;
-	-webkit-padding-start: 0;
-	clear: both;
-	li {
-		display: block;
-		clear: both;
-		margin-bottom: 10px;
-		a {
-			img {
-				float: left;
-				margin-right: 10px;
-			}
-		}
-	}
+.latest-projects {
+	
 }
 
 span.badge.badge-success {
@@ -119,6 +137,7 @@ div.modal-dialog {
 
 /* Footer bits */
 footer {
+	border-top: 1px solid darken($contentBg, 40%);
 	padding-top: 20px;
 	.links {
 		height: 30px;
