@@ -73,9 +73,10 @@ nav {
 .projects.index article section {
 	margin-left: 400px;
 }
-
-.projects.view {
+.projects.view, .projects.form {
 	margin: 15px 0;
+}
+.projects.view {
 	img {
 		float: left;
 	}
