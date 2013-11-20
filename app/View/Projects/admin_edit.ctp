@@ -13,6 +13,9 @@
 		echo $this->Form->input('approved', array('after' => '<span class="label label-info">Display this project on the site?</span>'));
 		echo $this->Form->input('screenshot', array('type' => 'file', 'after' => $this->Html->image('../files/project/screenshot/' . $this->request->data['Project']['screenshot_dir'] . '/medium_' . $this->request->data['Project']['screenshot'])));
 		echo $this->Form->input('screenshot_dir', array('type' => 'hidden'));
+
+		echo $this->Form->input('Plugin');
+		echo $this->Form->input('composer_file', array('type' => 'file'));
 	?>
 	</fieldset>
 <?php

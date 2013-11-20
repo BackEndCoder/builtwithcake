@@ -9,6 +9,7 @@ div.input {
 		width: $labelWidth;
 		margin-right: 20px;
 		text-align: right;
+		vertical-align: top;
 	}
 	input, textarea {
 		width: 75%;
@@ -19,6 +20,9 @@ div.input {
 	}
 	input[type=file] {
 		margin-left: $labelWidth;
+	}
+	select[multiple=multiple] {
+		height: 200px;
 	}
 	textarea {
 		height: 100px;
