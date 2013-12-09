@@ -48,6 +48,19 @@
 					<h4>Description</h4>
 					<?php echo h($project['Project']['description']);?>
 				</div>
+				<?php if (!empty($project['Plugin'])): ?>
+					<div class="plugins">
+						<h4>Plugins</h4>
+						<?php
+						$plugins = '';
+						foreach ($project['Plugin'] as $plugin) {
+							$plugins .= $this->Html->link($plugin['vendor'] . '/' . $plugin['package'], $plugin['repo']);
+							$plugins .= ', ';
+						}
+						echo rtrim($plugins, ', ');
+						?>
+					</div>
+				<?php endif;?>
 			</section>
 			<div class="clearfix"><!-- blank --></div>
 		</article>

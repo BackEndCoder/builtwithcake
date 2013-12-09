@@ -12,4 +12,18 @@
 		<h2>Description</h2>
 		<?php echo h($project['Project']['description']);?>
 	</div>
+
+	<?php if (!empty($project['Plugin'])): ?>
+		<div class="plugins">
+			<h4>Plugins</h4>
+			<?php
+			$plugins = '';
+			foreach ($project['Plugin'] as $plugin) {
+				$plugins .= $this->Html->link($plugin['vendor'] . '/' . $plugin['package'], $plugin['repo']);
+				$plugins .= ', ';
+			}
+			echo rtrim($plugins, ', ');
+			?>
+		</div>
+	<?php endif;?>
 </div>
