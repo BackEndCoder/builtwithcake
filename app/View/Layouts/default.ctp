@@ -51,7 +51,7 @@
 		</footer>
 	</div>
 
-	<?php echo $this->Html->script(array('//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', '../bootstrap/js/bootstrap.min'));?>
+	<?php echo $this->Html->script(array('//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js', '../bootstrap/js/bootstrap.min'));?>
 	<?php echo $this->fetch('script');?>
 </body>
 </html>

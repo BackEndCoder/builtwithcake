@@ -10,6 +10,10 @@
 		echo $this->Form->input('description');
 		echo $this->Form->input('screenshot', array('type' => 'file', 'after' => $this->Html->image('../files/project/screenshot/' . $this->request->data['Project']['screenshot_dir'] . '/medium_' . $this->request->data['Project']['screenshot'])));
 		echo $this->Form->input('screenshot_dir', array('type' => 'hidden'));
+
+		?><p>Tell us about the plugins you've used in your project.</p><?php
+		echo $this->Form->input('Plugin', array('after' => '<p>Or upload your composer.json and we\'ll auto-detect your dependancies</p>'));
+		echo $this->Form->input('composer_file', array('type' => 'file'));
 	?>
 	</fieldset>
 <?php
