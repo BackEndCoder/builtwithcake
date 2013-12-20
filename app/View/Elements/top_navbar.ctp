@@ -9,10 +9,13 @@
 		<a class="navbar-brand" href="#">Built With Cake</a>
 	</div>
 	<div class="collapse navbar-collapse" id="top-navbar">
-		<ul class="nav navbar-nav">
-			<li class="active"><a href="#">Home</a></li>
-			<li><a href="#">Link</a></li>
-			<li><a href="#">Link</a></li>
+		<ul class="nav navbar-nav pull-right">
+			<?php if (!$authedUser): ?>
+				<li><a href="/register">Register</a></li>
+				<li><a href="/login">Login</a></li>
+			<?php else: ?>
+				<li><a href="/logout">Logout</a></li>
+			<?php endif; ?>
 		</ul>
 	</div>
 </nav>

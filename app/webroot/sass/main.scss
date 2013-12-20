@@ -6,6 +6,7 @@
 /* Site layout */
 body {
 	background: $bodyBg url('../img/brushed.png') repeat;
+	padding-top: 70px;
 }
 body > .container {
 	box-shadow: 0 0 5px 0 rgba(0,0,0,0.3);
