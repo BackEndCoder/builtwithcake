@@ -21,6 +21,7 @@
     <![endif]-->
 </head>
 <body>
+	<?php echo $this->element('top_navbar'); ?>
 	<div class="container">
 		<header class="row">
 			<div class="title col-md-12">
