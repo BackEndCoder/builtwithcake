@@ -55,7 +55,7 @@ class ProjectsController extends AppController {
 		$this->set('plugins', $plugins);
 
 		$this->Crud->on('beforeSave', function ($e) {
-			if (isset($e->subject->request->data['Project']['composer_file']['tmp_name'])) {
+			if (!empty($e->subject->request->data['Project']['composer_file']['tmp_name'])) {
 				$e->subject->controller->request->data['Plugin']['Plugin'] = array_merge($e->subject->controller->request->data['Plugin']['Plugin'], $this->Project->Plugin->parseComposer($e->subject->request->data['Project']['composer_file']['tmp_name']));
 			}
 			$e->subject->controller->request->data['Project']['user_id'] = $this->Auth->user('id');
