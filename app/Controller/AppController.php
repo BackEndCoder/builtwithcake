@@ -79,8 +79,6 @@ class AppController extends Controller {
 		$this->Auth->allow(array('home', 'index', 'edit', 'view'));
 		$this->Auth->loginAction = array('controller' => 'bwc_users', 'action' => 'login', 'plugin' => false, 'admin' => false);
 		$this->Auth->authError = __('Please login.');
-
-		$this->set('authedUser', $this->Auth->loggedIn());
 	}
 
 /**
