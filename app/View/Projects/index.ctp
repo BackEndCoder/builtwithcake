@@ -4,6 +4,7 @@
 	</header>
 
 	<?php $k = 0; ?>
+	<?php $lastProject = count($projects) - 1; ?>
 	<?php foreach ($projects as $project):?>
 		<?php if ($k % 3 === 0): ?>
 			<article class="row">
@@ -68,7 +69,7 @@
 					</div>
 				</div>
 			</div>
-		<?php if ($k % 3 == 2): ?>
+		<?php if ($k % 3 === 2 || $k === $lastProject): ?>
 			</article>
 		<?php endif; ?>
 
