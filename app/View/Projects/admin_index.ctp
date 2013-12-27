@@ -30,7 +30,7 @@
 				echo $this->Html->link(
 					$this->Html->image('../files/project/screenshot/' . $project['Project']['screenshot_dir'] . '/small_' . $project['Project']['screenshot']),
 					'#',
-					array('data-toggle' => 'modal', 'data-target' => '#screenshot' . $project['Project']['id'], 'title' => 'Click to view larger size')
+					array('data-toggle' => 'modal', 'data-target' => '#screenshot' . $project['Project']['id'], 'title' => 'Click to view larger size', 'escape' => false)
 				);
 
 				?><div class="modal fade" id="<?php echo 'screenshot' . $project['Project']['id'];?>" tabindex="-1" role="dialog" aria-labelledby="modalLabel<?php echo $project['Project']['id'];?>" aria-hidden="true">
