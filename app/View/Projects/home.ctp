@@ -48,6 +48,5 @@
 					?>
 				</div>
 			<?php endforeach;?>
-		</ul>
-	</div>
+		</div>
 <?php endif;?>
