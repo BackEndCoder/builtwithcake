@@ -19,7 +19,7 @@ class ProjectsController extends AppController {
 				'approved' => true
 			),
 			'order' => array('Project.modified' => 'DESC'),
-			'limit' => 3
+			'limit' => 12
 		));
 		$this->set('latestProjects', $latestProjects);
 

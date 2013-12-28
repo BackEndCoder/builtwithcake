@@ -1,4 +1,4 @@
-<div id="featured-projects" class="carousel slide" data-ride="carousel">
+<!-- <div id="featured-projects" class="carousel slide" data-ride="carousel">
 	<?php $featuredProjects = Hash::extract($projects, '{n}.Project[featured=true]');?>
 	
 	<ol class="carousel-indicators">
@@ -29,7 +29,7 @@
 		<p>Praesent lectus mi, gravida ut sollicitudin eget, fringilla imperdiet ante. Fusce dolor velit, porta quis rhoncus id, volutpat sed risus. Donec pellentesque magna egestas erat tempus, quis cursus velit ultrices. Maecenas id euismod erat. Curabitur aliquam urna mauris, ac vulputate tellus lacinia id. Aliquam sit amet nisl mattis, fermentum tortor vitae, scelerisque lacus. Nulla sed lorem et erat porta interdum. Donec id blandit dui.</p>
 	</div>
 </div>
-
+-->
 <?php if (!empty($latestProjects)):?>
 	<div class='row latest-projects'>
 		<div class="col-md-12">
