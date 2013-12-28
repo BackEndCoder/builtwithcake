@@ -30,10 +30,12 @@
 				</li>
 			<?php endif; ?>
 		</ul>
-		<div class="pull-right">
-			<a class="btn btn-success navbar-btn" href="/projects/add">
-				<span class="glyphicon glyphicon-plus"></span> Add Project
-			</a>
-		</div>
+		<?php if ($user !== null): ?>
+			<div class="pull-right">
+				<a class="btn btn-success navbar-btn" href="/projects/add">
+					<span class="glyphicon glyphicon-plus"></span> Add Project
+				</a>
+			</div>
+		<?php endif; ?>
 	</div>
 </nav>
