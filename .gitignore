@@ -6,3 +6,7 @@
 /vendor
 /nbproject
 /app/webroot/.sass-cache
+/app/webroot/files/
+Vagrantfile
+/.vagrant
+bootstrap.sh

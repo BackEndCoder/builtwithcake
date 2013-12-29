@@ -31,22 +31,19 @@
 </div>
 -->
 <?php if (!empty($latestProjects)):?>
-	<div class='row latest-projects'>
-		<div class="col-md-12">
-			<h2>Latest projects</h2>
-		</div>
-			<?php foreach ($latestProjects as $project): ?>
-				<div class="col-md-4">
-					<?php
-					echo $this->Html->link(
-						"<h3>" . $project['Project']['title'] . "</h3>" .
-						$this->Html->image('../files/project/screenshot/' . $project['Project']['screenshot_dir'] . '/medium_' . $project['Project']['screenshot']) .
-						"<p>" . $project['Project']['url'] . "</p>",
-						array('controller' => 'projects', 'action' => 'view', $project['Project']['id']),
-						array('escape' => false)
-					);
-					?>
-				</div>
-			<?php endforeach;?>
-		</div>
+	<div id ="projects" class="row">
+		<?php foreach ($latestProjects as $project): ?>
+			<div class="project">
+				<?php
+				echo $this->Html->link(
+					"<h3>" . $project['Project']['title'] . "</h3>" .
+					$this->Html->image('../files/project/screenshot/' . $project['Project']['screenshot_dir'] . '/medium_' . $project['Project']['screenshot'], array('class' => 'img-responsive')) .
+					"<p>" . $project['Project']['url'] . "</p>",
+					array('controller' => 'projects', 'action' => 'view', $project['Project']['id']),
+					array('escape' => false)
+				);
+				?>
+			</div>
+		<?php endforeach;?>
+	</div>
 <?php endif;?>

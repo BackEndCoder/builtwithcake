@@ -23,13 +23,13 @@
 <body>
 	<?php echo $this->element('top_navbar'); ?>
 	<div class="container">
-		<header class="row">
+<!-- 		<header class="row">
 			<div class="title col-md-12">
 				<h1>Built With Cake</h1>
 				<p>Brought to you by <?php echo $this->Html->link('Friends of Cake', 'http://friendsofcake.com/');?></p>
 			</div>
 			<?php //echo $this->element('navigation');?>
-		</header>
+		</header> -->
 		<div id="content" class="row">
 			<div class="col-md-12">
 				<?php echo $this->Session->flash(); ?>
@@ -52,7 +52,16 @@
 		</footer>
 	</div>
 
-	<?php echo $this->Html->script(array('//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js', '../bootstrap/js/bootstrap.min'));?>
-	<?php echo $this->fetch('script');?>
+	<?php 
+		echo $this->Html->script(array(
+			'//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
+			'//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js',
+			'../bootstrap/js/bootstrap.min',
+			'jquery.isotope.min',
+			'app'
+			)
+		);
+		echo $this->fetch('script');
+	?>
 </body>
 </html>
