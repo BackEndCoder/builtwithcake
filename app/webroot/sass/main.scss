@@ -9,12 +9,12 @@ body {
 	padding-top: 70px;
 }
 body > .container {
-	box-shadow: 0 0 5px 0 rgba(0,0,0,0.3);
+	//box-shadow: 0 0 5px 0 rgba(0,0,0,0.3);
 }
-body > .container > header, #content, body > .container > footer {
+body > .container > header, #content {
 	background: $contentBg;
 }
-body > .container > header, body > .container > footer {
+body > .container > header {
 	background: darken($contentBg, 20%);
 }
 
@@ -135,7 +135,7 @@ div.modal-dialog {
 
 /* Footer bits */
 footer {
-	border-top: 1px solid darken($contentBg, 40%);
+	//border-top: 1px solid darken($contentBg, 40%);
 	padding-top: 20px;
 	.links {
 		height: 30px;
