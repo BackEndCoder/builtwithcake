@@ -5,9 +5,7 @@ $(function(){
 	$container.isotope({
 		resizable: false,
 		itemSelector: '.project',
-		masonry : {
-			columnWidth : { columnWidth: $container.width() / 5 }
-		}
+		masonry : {	columnWidth : $container.width() / 5 }
 	});
 
 	$(window).smartresize(function(){
