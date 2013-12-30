@@ -205,6 +205,24 @@ footer {
           transition-duration: 0s;
 }
 
+#projects {
+	padding: 10px;
+}
+
 .project {
-	width: 224px;
+	width: 230px;
+	margin: 5px 0;
+}
+
+.project h3 {
+	font-size: 14px;
+	margin-top: 0;
+}
+
+.project p, .project a {
+	font-size: 11px;
+}
+
+.project p {
+	margin: 0;
 }
