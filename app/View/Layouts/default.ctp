@@ -19,7 +19,11 @@
 </head>
 <body>
 	<?php echo $this->element('top_navbar'); ?>
-	<?php echo $this->element('intro'); ?>
+	<?php 
+		if ($this->request->controller === 'projects' && $this->request->action === 'home') {
+			echo $this->element('intro');
+		}
+	?>
 	<div class="container">
 		<div id="content" class="row">
 			<div class="col-md-12">

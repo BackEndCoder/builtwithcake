@@ -3,7 +3,7 @@
 		<?php foreach ($latestProjects as $project): ?>
 			<div class="project">
 				<div class="row">
-					<div class="col-md-4">
+					<div class="col-md-12">
 						<?php
 						echo $this->Html->link(
 							$this->Html->image('../files/project/screenshot/' . $project['Project']['screenshot_dir'] . '/medium_' . $project['Project']['screenshot'], array('class' => 'img-responsive')),
@@ -11,8 +11,6 @@
 							array('escape' => false)
 						);
 						?>
-					</div>
-					<div class="col-md-8">
 						<?php
 						echo $this->Html->link(
 							'<h3>' . $project['Project']['title'] . '</h3>',
