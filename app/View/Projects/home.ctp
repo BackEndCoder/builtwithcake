@@ -1,4 +1,3 @@
-
 <?php if (!empty($latestProjects)): ?>
 	<div id="projects" class="row">
 		<?php foreach ($latestProjects as $project): ?>

@@ -5,7 +5,7 @@
 
 /* Site layout */
 body {
-	background: $bodyBg url('../img/brushed.png') repeat;
+	background: $bodyBg url('../img/brushed-blue.jpg') repeat;
 	padding-top: 70px;
 }
 body > .container {
@@ -225,4 +225,65 @@ footer {
 
 .project p {
 	margin: 0;
+}
+
+#intro {
+	background: url(../img/glow-bkg-noshape.png) 0 50% no-repeat;
+	height: 300px;
+}
+
+#intro .banner {
+	background: url(../img/banner.png) 0 50% no-repeat;
+	width: 396px;
+	height: 65px;
+	margin-top: 32px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#intro .banner a {
+	font-family: 'Exo 2', sans-serif;
+	color: #000;
+	font-size: 18px;
+	padding-top: 2px;
+	text-align: center;
+	display: block;
+	width: 100%;
+}
+
+#intro .banner a:hover {
+	text-decoration: none;
+}
+
+#intro h1, #intro h2, #intro h3 {
+	font-family: 'Exo 2', sans-serif;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#intro h3 span.bold-heading {
+	font-weight: 700;
+}
+
+#intro h1 {
+	font-size: 46px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	line-height: 1;
+	font-weight: 400;
+}
+
+#intro h2 {
+	font-size: 36px;
+	margin-top: 30px;
+	margin-bottom: 5px;
+	line-height: 1;
+	letter-spacing: 7px;
+	font-weight: 300;
+}
+
+#intro h3 {
+	font-size: 28px;
+	margin-top: 10px;
 }
