@@ -21,7 +21,7 @@
 							<?php echo $user['username']; ?> <b class="caret"></b>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="#">My Account</a></li>
+						<li><a href="/user/<?php echo $user['username']; ?>">My Account</a></li>
 						<?php if ($user['is_admin'] === true): ?>
 							<li><a href="/admin/projects">Administration</a></li>
 						<?php endif; ?>
