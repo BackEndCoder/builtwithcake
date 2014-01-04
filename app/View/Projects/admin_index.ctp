@@ -6,25 +6,22 @@
 
 	<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered table-hover">
 	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('title'); ?></th>
 			<th><?php echo $this->Paginator->sort('url'); ?></th>
 			<th><?php echo $this->Paginator->sort('user_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('featured'); ?></th>
 			<th><?php echo $this->Paginator->sort('screenshot'); ?></th>
+			<th><?php echo $this->Paginator->sort('featured'); ?></th>
 			<th><?php echo $this->Paginator->sort('approved'); ?></th>
 			<th><?php echo $this->Paginator->sort('modified'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($projects as $project): ?>
 	<tr>
-		<td><?php echo h($project['Project']['id']); ?>&nbsp;</td>
 		<td><?php echo h($project['Project']['title']); ?>&nbsp;</td>
 		<td><?php echo h($project['Project']['url']); ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($project['BwcUser']['username'], array('controller' => 'users', 'action' => 'view', $project['BwcUser']['id'])); ?>
 		</td>
-		<td><?php echo $this->Boolean->display($project['Project']['featured']); ?>&nbsp;</td>
 		<td><?php
 			if (!empty($project['Project']['screenshot'])) {
 				echo $this->Html->link(
@@ -48,6 +45,7 @@
 				</div><?php
 			}
 		?></td>
+		<td><?php echo $this->Boolean->display($project['Project']['featured']); ?>&nbsp;</td>
 		<td><?php echo $this->Boolean->display($project['Project']['approved']); ?>&nbsp;</td>
 		<td><?php echo $this->Time->niceShort($project['Project']['modified']); ?>&nbsp;</td>
 		<td class="actions">
