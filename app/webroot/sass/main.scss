@@ -142,11 +142,13 @@ footer {
 		ul {
 			width: 50%;
 			margin: 0 auto;
+			text-align: center;
 			li {
-				display: block;
-				float: left;
+				display:-moz-inline-stack;
+				display:inline-block;
+				zoom:1;
+				*display:inline;
 				margin: 0 20px;
-				text-align: center;
 			}
 		}
 	}
@@ -289,4 +291,12 @@ footer {
 #intro h3 {
 	font-size: 28px;
 	margin-top: 10px;
+}
+
+footer p, footer a {
+	color: #f8f8f8;
+}
+
+footer a:hover {
+	color: #f8f8f8;
 }
