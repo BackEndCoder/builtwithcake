@@ -9,38 +9,28 @@
  * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 ?>
-<h2><?php echo __d('users', 'Login'); ?></h2>
-<?php echo $this->Session->flash('auth');?>
-<?php
-echo $this->Form->create($model, array(
-	'url' => array('controller' => 'bwc_users', 'action' => 'login'),
-	'id' => 'LoginForm',
-	'role' => 'form'
-));
-?>
-<div class="form-group row">
-	<div class="col-xs-4">
-		<?php echo $this->Form->input('email', array('label' => __d('users', 'Email'), 'class' => 'form-control')); ?>
+<div id="login">
+	<h2><?php echo __d('users', 'Login'); ?></h2>
+	<?php echo $this->Session->flash('auth');?>
+	<?php
+	echo $this->Form->create($model, array(
+		'url' => array('controller' => 'bwc_users', 'action' => 'login'),
+		'id' => 'LoginForm',
+		'role' => 'form'
+	));
+	?>
+	<div class="form-group">
+		<?php echo $this->Form->input('email', array('label' => false, 'class' => 'form-control', 'placeholder' => __d('users', 'Email address'))); ?>
+		<?php echo $this->Form->input('password',  array('label' => false, 'class' => 'form-control', 'placeholder' => __d('users', 'Password'))); ?>
 	</div>
-</div>
-<div class="form-group row">
-	<div class="col-xs-4">
-		<?php $forgotPW = $this->Html->link(__d('users', '(forgot password)'), array('action' => 'reset_password')); ?>
-		<?php echo $this->Form->input('password',  array('label' => __d('users', 'Password  ' . $forgotPW), 'class' => 'form-control')); ?>
+	<p><?php echo $this->Html->link(__d('users', 'I forgot my password'), array('action' => 'reset_password')); ?></p>
+	<div class="form-group">
+		<?php  echo '<p>' . $this->Form->input('remember_me', array('type' => 'checkbox', 'label' =>  __d('users', 'Remember me'))) . '</p>'; ?>
 	</div>
+	<?php echo $this->Form->hidden('User.return_to', array('value' => $return_to)); ?>
+	<?php echo $this->Form->submit(__d('users', 'Login'), array('class' => 'btn btn-primary btn-block')); ?>
+	<?php
+	echo $this->Form->end();
+	//echo $this->element('Users.Users/sidebar');
+	?>
 </div>
-<div class="form-group row">
-	<div class="col-xs-4">
-		<?php  echo '<p>' . $this->Form->input('remember_me', array('type' => 'checkbox', 'label' =>  __d('users', 'Remember Me'))) . '</p>'; ?>
-	</div>
-</div>
-<?php echo $this->Form->hidden('User.return_to', array('value' => $return_to)); ?>
-<div class="form-group row">
-	<div class="col-xs-4">
-<?php echo $this->Form->submit(__d('users', 'Login'), array('class' => 'btn btn-primary btn-block')); ?>
-	</div>
-</div>
-<?php
-echo $this->Form->end();
-//echo $this->element('Users.Users/sidebar');
-?>

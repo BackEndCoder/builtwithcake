@@ -25,12 +25,8 @@
 		}
 	?>
 	<div class="container">
-		<div id="content" class="row">
-			<div class="col-md-12">
-				<?php echo $this->Session->flash(); ?>
-				<?php echo $this->fetch('content'); ?>
-			</div>
-		</div>
+		<?php echo $this->Session->flash(); ?>
+		<?php echo $this->fetch('content'); ?>
 	</div>
 	<footer class="row">
 		<div class="col-md-12 links">

@@ -143,6 +143,7 @@ footer {
 			width: 50%;
 			margin: 0 auto;
 			text-align: center;
+			padding: 0;
 			li {
 				display:-moz-inline-stack;
 				display:inline-block;
@@ -291,6 +292,48 @@ footer {
 #intro h3 {
 	font-size: 28px;
 	margin-top: 10px;
+}
+
+#login {
+	background-color: #fff;
+	width: 320px;
+	margin: 0 auto;
+}
+
+#login {
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+}
+
+#login h2 {
+	margin-top: 0;
+}
+
+#login .form-control {
+	position: relative;
+	font-size: 16px;
+	height: auto;
+	padding: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#login .form-control:focus {
+	z-index: 2;
+}
+
+#login input[type="email"] {
+	margin-bottom: -1px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+#login input[type="password"] {
+	margin-bottom: 10px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
 }
 
 footer p, footer a {
