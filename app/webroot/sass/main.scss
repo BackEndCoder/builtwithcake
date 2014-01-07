@@ -60,9 +60,6 @@ nav {
 				float: left;
 				margin-right: 10px;
 			}
-			p.project-status {
-				float: right;
-			}
 		}
 	}
 }
@@ -334,6 +331,18 @@ footer {
 	margin-bottom: 10px;
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
+}
+
+#my-projects article.row {
+	margin-bottom: 15px;
+}
+
+#my-projects h3 {
+	margin-top: 0;
+}
+
+p.project-status {
+	text-align: right;
 }
 
 footer p, footer a {
