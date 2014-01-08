@@ -5,7 +5,10 @@ $(function(){
 	$container.isotope({
 		resizable: false,
 		itemSelector: '.project',
-		masonry : {	columnWidth : $container.width() / 5 }
+		masonry : {
+			columnWidth : $container.width() / 5,
+			gutterWidth : 10
+		}
 	});
 
 	$(window).smartresize(function(){

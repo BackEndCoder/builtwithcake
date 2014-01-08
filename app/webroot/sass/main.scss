@@ -206,13 +206,13 @@ footer {
 }
 
 #projects {
-	padding: 10px;
+	margin-bottom: 10px;
 }
 
 .project {
 	width: 220px;
-	margin: 5px 0;
 	padding: 5px;
+	margin: 5px;
 	border: 1px solid #e5e5e5;
 	border-radius: 3px;
 }
@@ -339,6 +339,10 @@ footer {
 
 #my-projects h3 {
 	margin-top: 0;
+}
+
+.isotope-wrapper {
+	padding: 10px;
 }
 
 p.project-status {

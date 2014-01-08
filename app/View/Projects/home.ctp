@@ -1,4 +1,4 @@
-<div id="content" class="row">
+<div id="content" class="row isotope-wrapper">
 	<?php if (!empty($latestProjects)): ?>
 		<div id="projects">
 			<?php foreach ($latestProjects as $project): ?>
