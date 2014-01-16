@@ -15,7 +15,7 @@
 	<?php
 	echo $this->Form->create($model, array(
 		'url' => array('controller' => 'bwc_users', 'action' => 'login'),
-		'id' => 'LoginForm',
+		'id' => 'login-form',
 		'role' => 'form'
 	));
 	?>
@@ -31,6 +31,5 @@
 	<?php echo $this->Form->submit(__d('users', 'Login'), array('class' => 'btn btn-primary btn-block')); ?>
 	<?php
 	echo $this->Form->end();
-	//echo $this->element('Users.Users/sidebar');
 	?>
 </div>
