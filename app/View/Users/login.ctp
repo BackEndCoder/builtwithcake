@@ -20,7 +20,7 @@
 	));
 	?>
 	<div class="form-group">
-		<?php echo $this->Form->input('email', array('label' => false, 'class' => 'form-control', 'placeholder' => __d('users', 'Email address'))); ?>
+		<?php echo $this->Form->input('email', array('label' => false, 'class' => 'form-control', 'placeholder' => __d('users', 'Email Address'))); ?>
 		<?php echo $this->Form->input('password',  array('label' => false, 'class' => 'form-control', 'placeholder' => __d('users', 'Password'))); ?>
 	</div>
 	<p><?php echo $this->Html->link(__d('users', 'I forgot my password'), array('action' => 'reset_password')); ?></p>
