@@ -29,7 +29,7 @@
 					);
 					?>
 				</div>
-				<?php if ($i % 4 === 0 && $i !== 0): ?>
+				<?php if ($i % 4 === 0): ?>
 					</div>
 					<div class="row">
 				<?php elseif ($i === $totalProjects): ?>
